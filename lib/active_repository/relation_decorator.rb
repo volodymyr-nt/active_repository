@@ -18,9 +18,6 @@ module ActiveRepository
     RETURN_RELATION_METHODS.each do |name|
       define_method(name) do |*args|
         relation = @relation.send(name, *args)
-        # new_verion = clone
-        # new_verion.relation = relation
-        # new_verion
         self.class.new(relation)
       end
     end
