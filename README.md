@@ -40,6 +40,6 @@ event_repository = EventRepository.new
 # make query
 actual_events = event_repository.actual
 
-#queries can be chained together 
+# queries can be chained together 
 actual_events_in_lviv = event_repository.actual.by_city_id(lviv_city.id)
 ```
