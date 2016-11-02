@@ -9,7 +9,8 @@ Partially compabile with ActiveRecord scopes.
 ``` ruby
 class EventRepository
   include ActiveRepository::Base
-
+  
+  # set Active Record model that will be used to perform queries
   adapter Event
    
   scope :actual, -> { where('events.event_close > ?', Time.current) }
